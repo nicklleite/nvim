@@ -7,8 +7,9 @@ opt.number = true               -- show line numbers
 opt.relativenumber = true       -- show relative line numbers
 opt.cursorline = true           -- highlight current line
 opt.termguicolors = true        -- enable true colors
-opt.clipboard = "unnamedplus"  -- use system clipboard
+opt.clipboard = "unnamedplus"   -- use system clipboard
 opt.swapfile = false            -- disable swap files
+opt.mouse = "a"                 -- enable mouse mode (default: '')
 
 -- Indentation
 opt.tabstop = 4                 -- number of spaces for a tab
