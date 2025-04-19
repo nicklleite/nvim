@@ -163,7 +163,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    <!-- Here I include all the plugin files -->
+   require('user-settings.plugins.neotree') 
 })
 ```
 
@@ -185,7 +185,6 @@ require('lazy').setup({
 | Start visual block mode     | `<Ctrl> + v`       |
 | Move block up/down          | `J / K` in visual  |
 | Toggle Neotree              | `\`                |
-|-----------------------------|--------------------|
 
 ---
 
