@@ -16,6 +16,7 @@ opt.tabstop = 4                 -- number of spaces for a tab
 opt.shiftwidth = 4              -- number of spaces for autoindent
 opt.expandtab = true            -- convert tabs to spaces
 opt.smartindent = true          -- smart autoindent
+opt.autoindent = true           -- keeps the indentation from previous line
 
 -- Search
 opt.ignorecase = true           -- ignore case in search

@@ -171,20 +171,26 @@ require('lazy').setup({
 
 ## Useful Neovim Shortcuts
 
-| Action                      | Shortcut           |
-|-----------------------------|--------------------|
-| Save (Normal mode)          | `<leader>w`        |
-| Save (Insert mode)          | `<Ctrl> + s`       |
-| Save and quit               | `<leader>q`        |
-| Quit                        | `:q`               |
-| Undo                        | `u`                |
-| Redo                        | `<Ctrl> + r`       |
-| Go to beginning of file     | `gg0`              |
-| Go to end of file           | `G`                |
-| Go to end of line           | `$`                |
-| Start visual block mode     | `<Ctrl> + v`       |
-| Move block up/down          | `J / K` in visual  |
-| Toggle Neotree              | `\`                |
+| Action                      | Shortcut                        |
+|-----------------------------|---------------------------------|
+| Save (Normal mode)          | `<leader>w`                     |
+| Save (Insert mode)          | `<Ctrl> + s`                    |
+| Save and quit               | `<leader>q`                     |
+| Quit                        | `:q`                            |
+| Undo                        | `u`                             |
+| Redo                        | `<Ctrl> + r`                    |
+| Go to beginning of file     | `gg0`                           |
+| Go to end of file           | `G`                             |
+| Go to end of line           | `$`                             |
+| Start visual block mode     | `<Ctrl> + v`                    |
+| Move block up/down          | `J / K` in visual               |
+| Toggle Neotree              | `\`                             |
+| Search forward              | `/text`                         |
+| Search backward             | `?text`                         |
+| Next search result          | `n`                             |
+| Previous search result      | `N`                             |
+| Search word under cursor    | `*` (forward) / `#` (backward)  |
+
 
 ---
 
