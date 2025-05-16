@@ -130,6 +130,8 @@ opt.relativenumber = true    	-- show relative line numbers on the other lines
 | `J`        | Move selection down one line    |
 | `K`        | Move selection up one line      |
 
+---
+
 ### Window Navigation
 
 | Action                   | Shortcut              |
