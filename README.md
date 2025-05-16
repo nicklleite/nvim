@@ -86,50 +86,58 @@ opt.relativenumber = true    	-- show relative line numbers on the other lines
 
 ---
 
-## keymaps.lua
+## Keymaps 
 
-```lua
-local map = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
+### Normal Mode
 
--- Set <Space> as leader key
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+| Shortcut         | Description                            |
+|------------------|----------------------------------------|
+| `<leader>w`      | Save file                              |
+| `<leader>q`      | Quit Neovim                            |
+| `<leader>wq`     | Save and quit                          |
+| `<leader>L`      | Open the Lazy plugin window            |
+| `<S-Tab>`        | Unindent current line                  |
+| `<leader>rel`    | Remove all `^M` (`\r`) characters      |
+| `<C-d>`          | Page down and center the cursor        |
+| `<C-u>`          | Page up and center the cursor          |
+| `gg`             | Go to first line and first column      |
+| `G`              | Go to last line and end of line        |
+| `\`              | Toggle Neotree file browser            |
 
--- Disable the spacebar key's default behavior in Normal and Visual modes
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+---
 
--- 1) Normal mode
-map("n", "<leader>w", ":w<CR>", { desc = "Save file" })
-map("n", "<leader>q", ":q<CR>", { desc = "Quit nvim" })
-map("n", "<leader>wq", ":wq<CR>", { desc = "Save and quit" })
-map("n", "<leader>L", ":Lazy<CR>", { desc = "Opens the Lazy window" })
-map("n", "<S-Tab>", "<<", { desc = "Unindent line (normal mode)" })
+### Insert Mode
 
--- 1.1) Regex macros
-map("n", "<leader>rel", "[[:%s/\r//ge<CR>]]", { desc = "Removes any occurrence of '\r' on files" })
+| Shortcut   | Description                               |
+|------------|-------------------------------------------|
+| `jk`       | Exit insert mode                          |
+| `<C-s>`    | Save file without leaving insert mode     |
 
--- 2) Insert mode
-map("i", "jk", "<Esc>", { desc = "Exit insert mode using 'jk'" })
-map("i", "<C-s>", "<Esc>:w<CR>a", { desc = "Save file without leaving insert mode" })
+---
 
--- 3) Visual mode
-map("v", "<S-Tab>", "<gv", { desc = "Unindent selection (visual mode)" })
+### Visual Mode
 
--- 4) Visual block mode
-map("x", "J", ":move '>+1<CR>gv-gv", { desc = "Move selection down" })
-map("x", "K", ":move '<-2<CR>gv-gv", { desc = "Move selection up" })
+| Shortcut   | Description                     |
+|------------|---------------------------------|
+| `<S-Tab>`  | Unindent selected block         |
 
--- 5) Navigation
-map("n", "<C-d>", "<C-d>zz", { desc = "Page down and center cursor" })
-map("n", "<C-u>", "<C-u>zz", { desc = "Page up and center cursor" })
+---
 
--- 6) File navigation
-map("n", "gg", "gg0", { desc = "Go to start of file (line 1, column 0)" })
-map("n", "G", "G$", { desc = "Go to end of file (last line, end of line)" })
+### Visual Block
 
-map("n", "\\", ":Neotree toggle<CR>", { desc = "Open file browser" })
-```
+| Shortcut   | Description                     |
+|------------|---------------------------------|
+| `J`        | Move selection down one line    |
+| `K`        | Move selection up one line      |
+
+### Window Navigation
+
+| Action                   | Shortcut              |
+|--------------------------|-----------------------|
+| Move to left split       | `<Ctrl> + w` then `h` |
+| Move to down split       | `<Ctrl> + w` then `j` |
+| Move to up split         | `<Ctrl> + w` then `k` |
+| Move to right split      | `<Ctrl> + w` then `l` |
 
 ---
 
