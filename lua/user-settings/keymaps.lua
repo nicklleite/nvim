@@ -16,7 +16,9 @@ map("n", "<leader>L", ":Lazy<CR>", { desc = "Opens the Lazy window" })
 map("n", "<S-Tab>", "<<", { desc = "Unindent line (normal mode)" })
 
 -- 1.1) Regex macros
-map("n", "<leader>rel", "[[:%s/\r//ge<CR>]]", { desc = "Removes any occurrence of '\r' on files" })
+map("n", "<leader>rel", ":s/\\r//ge<CR>", { desc = "Removes any occurrence of '\r' on files" })
+map("v", "<leader>rms",  ":s/^\\s\\+//<CR>", { desc = "Remove indentation in selection" })
+map("v", "<leader>rmc", ":s/,$//<CR>", { desc = "Remove comma at the end of each line in selection" })
 
 -- 2) Insert mode
 map("i", "jk", "<Esc>", { desc = "Exit insert mode using 'jk'" })
